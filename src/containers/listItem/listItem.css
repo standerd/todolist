@@ -1,0 +1,32 @@
+.remove {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: "Indie Flower", cursive;
+  height: 100%;
+  width: 50px;
+  border-radius: 10px;
+}
+
+.remove:hover {
+  cursor: pointer;
+  background-color: rgba(1, 1, 1, 0.3);
+  color: white;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 30px;
+  margin-bottom: 1%;
+  padding: 1% 0;
+}
+
+.listItem:nth-child(even) {
+  background-color: rgba(1, 1, 1, 0.3);
+}
+
+li {
+  width: 800px;
+  padding: 3px;
+}
