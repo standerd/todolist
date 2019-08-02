@@ -2,6 +2,8 @@ import React from "react";
 import "./listItem.css";
 
 const listItem = props => {
+  // after user submits a item, props is passed from todo component and the
+  // array is updated and list is reloaded.
   let itemArray = props.items;
 
   let item = itemArray.map((key, i) => {

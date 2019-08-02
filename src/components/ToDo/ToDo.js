@@ -12,10 +12,14 @@ class ToDo extends Component {
     };
   }
 
+  //captures what the user has typed in the box.
   userInputChange = e => {
     this.setState({ value: e.target.value });
   };
 
+  // creates a new array to capture the value and then sets the state of the
+  // original array to include the new list item. This is passed to the list
+  // item container
   updateList = () => {
     let newArray = [...this.state.items];
     newArray.push(this.state.value);
@@ -23,6 +27,7 @@ class ToDo extends Component {
     this.setState({ value: "" });
   };
 
+  // listens for the enter key press and then submits the user input
   updateListKey = e => {
     if (e.key === "Enter") {
       let newArray = [...this.state.items];
@@ -32,6 +37,7 @@ class ToDo extends Component {
     }
   };
 
+  // removes item from the list on remove click.
   removeItem = e => {
     let index = e.target.id;
     let newArray = [...this.state.items];
@@ -39,6 +45,7 @@ class ToDo extends Component {
     this.setState({ items: newArray });
   };
 
+  //sets the focus on the user input
   componentDidMount() {
     this.nameInput.focus();
   }
